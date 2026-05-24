@@ -1,0 +1,1431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital Marketing Specialist | Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #1a1a2e;
+    --accent: #e63946;
+    --accent2: #457b9d;
+    --soft: #f8f7f4;
+    --card-bg: #ffffff;
+    --text-main: #1a1a2e;
+    --text-muted: #6b7280;
+    --border: #e8e4de;
+    --section-gap: 100px;
+    --font-head: 'Syne', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-body);
+    color: var(--text-main);
+    background: var(--soft);
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; width: 100%; z-index: 100;
+    background: rgba(248,247,244,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 60px; height: 64px;
+  }
+  .nav-logo {
+    font-family: var(--font-head);
+    font-size: 18px; font-weight: 800;
+    color: var(--primary);
+    letter-spacing: -0.5px;
+  }
+  .nav-logo span { color: var(--accent); }
+  .nav-links { display: flex; gap: 36px; list-style: none; }
+  .nav-links a {
+    font-size: 13px; font-weight: 500; text-decoration: none;
+    color: var(--text-muted); letter-spacing: 0.4px;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--accent); }
+
+  /* HERO */
+  #hero {
+    min-height: 100vh;
+    padding: 120px 60px 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .hero-tag {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: #fff; border: 1px solid var(--border);
+    padding: 6px 14px; border-radius: 100px;
+    font-size: 12px; font-weight: 500; color: var(--accent);
+    text-transform: uppercase; letter-spacing: 1px;
+    margin-bottom: 24px;
+  }
+  .hero-tag::before {
+    content: ''; width: 7px; height: 7px;
+    background: var(--accent); border-radius: 50%;
+  }
+  .hero-title {
+    font-family: var(--font-head);
+    font-size: clamp(42px, 5vw, 68px);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -2px;
+    color: var(--primary);
+    margin-bottom: 20px;
+  }
+  .hero-title .line2 { color: var(--accent); }
+  .hero-bio {
+    font-size: 16px; line-height: 1.75;
+    color: var(--text-muted); max-width: 480px;
+    margin-bottom: 36px;
+  }
+  .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--primary); color: #fff;
+    padding: 13px 28px; border-radius: 8px;
+    font-size: 14px; font-weight: 500;
+    text-decoration: none; transition: background 0.2s;
+  }
+  .btn-primary:hover { background: var(--accent); }
+  .btn-outline {
+    background: transparent; color: var(--primary);
+    padding: 13px 28px; border-radius: 8px;
+    font-size: 14px; font-weight: 500;
+    text-decoration: none; border: 1.5px solid var(--border);
+    transition: border-color 0.2s;
+  }
+  .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+
+  /* HERO PHOTO SIDE */
+  .hero-photo-col {
+    display: flex; flex-direction: column; align-items: flex-end; gap: 20px;
+  }
+  .photo-frame {
+    width: 340px; height: 420px;
+    background: linear-gradient(135deg, #e8e4de 0%, #d4cfc7 100%);
+    border-radius: 20px;
+    position: relative; overflow: hidden;
+    border: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .photo-frame .photo-placeholder {
+    font-family: var(--font-head);
+    font-size: 15px; font-weight: 700;
+    color: #a09890;
+    text-align: center; padding: 20px;
+  }
+  .photo-frame img {
+    width: 100%; height: 100%; object-fit: cover;
+  }
+  .photo-badge {
+    position: absolute; bottom: 20px; left: 20px;
+    background: #fff; border-radius: 12px;
+    padding: 10px 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    font-size: 12px;
+  }
+  .photo-badge strong {
+    display: block; font-family: var(--font-head);
+    font-size: 20px; font-weight: 800; color: var(--accent);
+  }
+  .photo-badge span { color: var(--text-muted); }
+
+  .hero-stats {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 12px; width: 340px;
+  }
+  .stat-chip {
+    background: #fff; border: 1px solid var(--border);
+    border-radius: 12px; padding: 14px 18px;
+  }
+  .stat-chip .num {
+    font-family: var(--font-head);
+    font-size: 24px; font-weight: 800; color: var(--primary);
+  }
+  .stat-chip .lbl {
+    font-size: 11px; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 0.5px;
+    margin-top: 2px;
+  }
+
+  /* SECTIONS WRAPPER */
+  .section-wrap {
+    max-width: 1200px; margin: 0 auto;
+    padding: 0 60px var(--section-gap);
+  }
+  .section-label {
+    font-size: 11px; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 2px;
+    color: var(--accent); margin-bottom: 12px;
+  }
+  .section-title {
+    font-family: var(--font-head);
+    font-size: clamp(28px, 3vw, 44px);
+    font-weight: 800; letter-spacing: -1px;
+    color: var(--primary); margin-bottom: 16px;
+  }
+  .section-sub {
+    font-size: 15px; color: var(--text-muted);
+    line-height: 1.7; max-width: 560px; margin-bottom: 50px;
+  }
+
+  /* DIVIDER */
+  .divider {
+    width: 100%; height: 1px;
+    background: var(--border);
+    margin: 0 60px 80px;
+    max-width: 1080px;
+    margin-left: auto; margin-right: auto;
+  }
+
+  /* AUTOMATION / N8N SECTION */
+  .auto-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 30px; margin-top: 10px;
+  }
+  .auto-hero-card {
+    grid-column: 1 / -1;
+    background: var(--primary);
+    border-radius: 20px; padding: 44px 48px;
+    color: #fff; position: relative; overflow: hidden;
+  }
+  .auto-hero-card::after {
+    content: 'n8n';
+    font-family: var(--font-head);
+    font-size: 120px; font-weight: 800;
+    color: rgba(255,255,255,0.04);
+    position: absolute; right: -10px; bottom: -20px;
+    letter-spacing: -4px; line-height: 1;
+  }
+  .auto-hero-card h3 {
+    font-family: var(--font-head);
+    font-size: 26px; font-weight: 800;
+    margin-bottom: 12px; letter-spacing: -0.5px;
+  }
+  .auto-hero-card p {
+    font-size: 15px; line-height: 1.8;
+    color: rgba(255,255,255,0.7); max-width: 680px;
+  }
+  .auto-badge {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff; font-size: 11px; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 1px;
+    padding: 5px 12px; border-radius: 6px;
+    margin-bottom: 18px;
+  }
+  .auto-flow {
+    display: flex; align-items: center; gap: 8px;
+    margin-top: 28px; flex-wrap: wrap;
+  }
+  .auto-flow-step {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 8px; padding: 8px 14px;
+    font-size: 12px; font-weight: 500;
+  }
+  .auto-flow-arrow {
+    color: rgba(255,255,255,0.35); font-size: 16px;
+  }
+
+  .auto-card {
+    background: #fff; border: 1px solid var(--border);
+    border-radius: 16px; padding: 28px;
+  }
+  .auto-card-icon {
+    width: 44px; height: 44px;
+    background: #fef2f2; border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px; margin-bottom: 16px;
+  }
+  .auto-card h4 {
+    font-family: var(--font-head);
+    font-size: 17px; font-weight: 700;
+    margin-bottom: 8px; color: var(--primary);
+  }
+  .auto-card p {
+    font-size: 13.5px; line-height: 1.7;
+    color: var(--text-muted);
+  }
+
+  /* SEO SECTION */
+  .seo-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .seo-card {
+    background: #fff; border: 1px solid var(--border);
+    border-radius: 16px; padding: 28px;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .seo-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.06);
+  }
+  .seo-card-num {
+    font-family: var(--font-head);
+    font-size: 13px; font-weight: 700;
+    color: var(--accent); margin-bottom: 10px;
+  }
+  .seo-card h4 {
+    font-family: var(--font-head);
+    font-size: 18px; font-weight: 700;
+    color: var(--primary); margin-bottom: 10px;
+  }
+  .seo-card p {
+    font-size: 13.5px; line-height: 1.7; color: var(--text-muted);
+  }
+  .seo-tools-row {
+    display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px;
+  }
+  .tool-pill {
+    background: var(--soft); border: 1px solid var(--border);
+    font-size: 11px; font-weight: 500;
+    padding: 4px 12px; border-radius: 100px;
+    color: var(--text-muted);
+  }
+
+  /* ADS SECTION */
+  .ads-header-row {
+    display: grid; grid-template-columns: 2fr 1fr;
+    gap: 30px; margin-bottom: 30px;
+  }
+  .ads-intro-card {
+    background: #fff; border: 1px solid var(--border);
+    border-radius: 20px; padding: 36px;
+  }
+  .ads-intro-card h3 {
+    font-family: var(--font-head);
+    font-size: 22px; font-weight: 800;
+    color: var(--primary); margin-bottom: 12px;
+  }
+  .ads-intro-card p {
+    font-size: 14px; line-height: 1.8; color: var(--text-muted);
+  }
+  .ads-platforms {
+    display: flex; flex-direction: column; gap: 10px; margin-top: 24px;
+  }
+  .ads-platform-row {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 12px 0; border-top: 1px solid var(--border);
+    font-size: 13px;
+  }
+  .ads-platform-name { font-weight: 600; color: var(--primary); }
+  .ads-platform-tag {
+    background: #f0fdf4; color: #166534;
+    font-size: 11px; font-weight: 600;
+    padding: 3px 10px; border-radius: 6px;
+    text-transform: uppercase; letter-spacing: 0.5px;
+  }
+  .ads-stat-col {
+    display: flex; flex-direction: column; gap: 12px;
+  }
+  .ads-stat-box {
+    background: var(--primary); color: #fff;
+    border-radius: 16px; padding: 24px;
+    flex: 1;
+  }
+  .ads-stat-box .big {
+    font-family: var(--font-head);
+    font-size: 36px; font-weight: 800;
+    color: var(--accent); line-height: 1;
+    margin-bottom: 6px;
+  }
+  .ads-stat-box .lbl {
+    font-size: 12px; color: rgba(255,255,255,0.6);
+    text-transform: uppercase; letter-spacing: 0.5px;
+  }
+  .ads-proof-row {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  .proof-card {
+    background: #fff; border: 1px solid var(--border);
+    border-radius: 16px; padding: 24px;
+    text-align: center;
+  }
+  .proof-card .proof-icon {
+    width: 48px; height: 48px; margin: 0 auto 14px;
+    background: #fef2f2; border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px;
+  }
+  .proof-card h5 {
+    font-family: var(--font-head);
+    font-size: 14px; font-weight: 700;
+    color: var(--primary); margin-bottom: 6px;
+  }
+  .proof-card p {
+    font-size: 12px; color: var(--text-muted); line-height: 1.6;
+  }
+
+  /* IMAGE UPLOAD PLACEHOLDER */
+  .proof-img-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 14px; margin-top: 24px;
+  }
+  .proof-img-box {
+    aspect-ratio: 1.2;
+    background: #f3f1ee;
+    border: 1.5px dashed #d4cfc7;
+    border-radius: 12px;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s;
+    position: relative; overflow: hidden;
+  }
+  .proof-img-box:hover { background: #ece9e3; }
+  .proof-img-box img {
+    width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0;
+  }
+  .proof-img-box .upload-label {
+    font-size: 11px; color: #a09890; text-align: center;
+    padding: 10px; z-index: 1;
+  }
+  .proof-img-box .upload-icon {
+    font-size: 24px; margin-bottom: 6px; color: #c4bfb8;
+  }
+  .proof-img-box input[type=file] {
+    position: absolute; inset: 0; opacity: 0; cursor: pointer;
+  }
+
+  /* SMM SECTION */
+  .smm-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+  .smm-left {
+    display: flex; flex-direction: column; gap: 20px;
+  }
+  .smm-platform-card {
+    background: #fff; border: 1px solid var(--border);
+    border-radius: 16px; padding: 22px 26px;
+    display: flex; align-items: center; gap: 18px;
+  }
+  .smm-platform-icon {
+    width: 48px; height: 48px; border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px; flex-shrink: 0;
+  }
+  .smm-platform-card h5 {
+    font-family: var(--font-head);
+    font-size: 15px; font-weight: 700; color: var(--primary);
+    margin-bottom: 4px;
+  }
+  .smm-platform-card p { font-size: 12.5px; color: var(--text-muted); }
+  .smm-right {
+    background: var(--primary); border-radius: 20px;
+    padding: 36px; color: #fff;
+  }
+  .smm-right h3 {
+    font-family: var(--font-head);
+    font-size: 22px; font-weight: 800;
+    margin-bottom: 20px;
+  }
+  .smm-deliverable {
+    display: flex; align-items: flex-start; gap: 12px;
+    margin-bottom: 18px; padding-bottom: 18px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .smm-deliverable:last-child { margin-bottom: 0; padding-bottom: 0; border: none; }
+  .smm-deliverable .dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--accent); flex-shrink: 0; margin-top: 6px;
+  }
+  .smm-deliverable h6 {
+    font-size: 14px; font-weight: 600; margin-bottom: 3px;
+  }
+  .smm-deliverable p { font-size: 12.5px; color: rgba(255,255,255,0.55); }
+
+  /* DESIGN SECTION */
+  .design-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .design-card {
+    background: #fff; border: 1px solid var(--border);
+    border-radius: 16px; overflow: hidden;
+  }
+  .design-card-img {
+    height: 180px;
+    background: #f3f1ee;
+    border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: center;
+    position: relative; overflow: hidden; cursor: pointer;
+  }
+  .design-card-img img {
+    width: 100%; height: 100%; object-fit: cover;
+  }
+  .design-card-img .upload-overlay {
+    position: absolute; inset: 0;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    background: #f3f1ee;
+  }
+  .design-card-img .upload-overlay span {
+    font-size: 11px; color: #a09890; margin-top: 6px;
+  }
+  .design-card-img input[type=file] {
+    position: absolute; inset: 0; opacity: 0; cursor: pointer;
+  }
+  .design-card-body { padding: 18px 20px; }
+  .design-card-body h5 {
+    font-family: var(--font-head);
+    font-size: 15px; font-weight: 700;
+    color: var(--primary); margin-bottom: 6px;
+  }
+  .design-card-body p { font-size: 12.5px; color: var(--text-muted); }
+
+  /* EXPERIENCE SECTION */
+  .exp-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .exp-card {
+    background: #fff; border: 1px solid var(--border);
+    border-radius: 16px; padding: 24px;
+    transition: transform 0.2s;
+  }
+  .exp-card:hover { transform: translateY(-2px); }
+  .exp-card-type {
+    font-size: 10px; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 1px;
+    color: var(--accent2); margin-bottom: 8px;
+  }
+  .exp-card h5 {
+    font-family: var(--font-head);
+    font-size: 15px; font-weight: 800;
+    color: var(--primary); margin-bottom: 10px;
+  }
+  .exp-skills-wrap {
+    display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px;
+  }
+  .exp-skill-tag {
+    background: var(--soft); border: 1px solid var(--border);
+    font-size: 10px; font-weight: 500;
+    color: var(--text-muted);
+    padding: 3px 9px; border-radius: 100px;
+  }
+  .exp-link {
+    display: block; margin-top: 14px;
+    font-size: 12px; color: var(--accent2);
+    text-decoration: none; font-weight: 500;
+  }
+  .exp-link:hover { text-decoration: underline; }
+
+  /* AI TOOLS */
+  .tools-masonry {
+    columns: 3; gap: 20px;
+  }
+  .tools-group {
+    break-inside: avoid; margin-bottom: 20px;
+    background: #fff; border: 1px solid var(--border);
+    border-radius: 16px; padding: 24px;
+  }
+  .tools-group h4 {
+    font-family: var(--font-head);
+    font-size: 15px; font-weight: 700;
+    color: var(--primary); margin-bottom: 14px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .tools-group h4 span {
+    font-size: 20px;
+  }
+  .tool-item {
+    display: flex; align-items: center; gap: 8px;
+    padding: 7px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 13px; color: var(--text-muted);
+  }
+  .tool-item:last-child { border: none; }
+  .tool-item::before {
+    content: ''; width: 6px; height: 6px;
+    background: var(--border); border-radius: 50%; flex-shrink: 0;
+  }
+
+  /* CONTACT */
+  #contact {
+    background: var(--primary);
+    padding: 80px 60px;
+    text-align: center;
+  }
+  #contact .c-label {
+    font-size: 11px; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 2px;
+    color: var(--accent); margin-bottom: 14px;
+  }
+  #contact h2 {
+    font-family: var(--font-head);
+    font-size: clamp(32px, 4vw, 54px);
+    font-weight: 800; color: #fff;
+    letter-spacing: -1.5px; margin-bottom: 16px;
+  }
+  #contact p {
+    font-size: 15px; color: rgba(255,255,255,0.55);
+    max-width: 500px; margin: 0 auto 40px;
+    line-height: 1.8;
+  }
+  .contact-chips {
+    display: flex; justify-content: center;
+    gap: 14px; flex-wrap: wrap;
+  }
+  .contact-chip {
+    display: flex; align-items: center; gap: 8px;
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.12);
+    color: #fff; font-size: 13px; font-weight: 500;
+    padding: 10px 20px; border-radius: 100px;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .contact-chip:hover { background: rgba(255,255,255,0.14); }
+
+  /* FOOTER */
+  footer {
+    background: var(--primary);
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding: 24px 60px;
+    display: flex; align-items: center; justify-content: space-between;
+    font-size: 12px; color: rgba(255,255,255,0.3);
+  }
+  footer strong { color: rgba(255,255,255,0.7); font-weight: 600; }
+
+  /* SCROLL REVEAL */
+  .reveal {
+    opacity: 0; transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .reveal.visible { opacity: 1; transform: none; }
+
+  @media (max-width: 900px) {
+    nav { padding: 0 24px; }
+    #hero { grid-template-columns: 1fr; padding: 100px 24px 60px; }
+    .hero-photo-col { align-items: center; }
+    .section-wrap { padding: 0 24px var(--section-gap); }
+    .auto-grid { grid-template-columns: 1fr; }
+    .seo-grid { grid-template-columns: 1fr; }
+    .ads-header-row { grid-template-columns: 1fr; }
+    .ads-proof-row { grid-template-columns: 1fr 1fr; }
+    .proof-img-grid { grid-template-columns: 1fr 1fr; }
+    .smm-grid { grid-template-columns: 1fr; }
+    .design-grid { grid-template-columns: 1fr 1fr; }
+    .exp-grid { grid-template-columns: 1fr; }
+    .tools-masonry { columns: 1; }
+    #contact { padding: 60px 24px; }
+    footer { padding: 20px 24px; flex-direction: column; gap: 8px; text-align: center; }
+    .nav-links { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Digital<span>.</span>Marketer</div>
+  <ul class="nav-links">
+    <li><a href="#automation">Automation</a></li>
+    <li><a href="#seo">SEO</a></li>
+    <li><a href="#ads">Paid Ads</a></li>
+    <li><a href="#smm">Social</a></li>
+    <li><a href="#design">Creative</a></li>
+    <li><a href="#experience">Work</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section style="background: var(--soft);">
+  <div id="hero">
+    <div class="hero-text">
+      <div class="hero-tag">Available for Projects</div>
+      <h1 class="hero-title">
+        Digital Growth<br>
+        <span class="line2">Specialist</span>
+      </h1>
+      <p class="hero-bio">
+        Full-stack digital marketer with deep expertise in SEO/AEO/GEO, Performance Ads, Social Media Management, and AI-powered Marketing Automation using n8n — turning data into measurable growth across 12+ industries.
+      </p>
+      <div class="hero-ctas">
+        <a href="#experience" class="btn-primary">View My Work</a>
+        <a href="#contact" class="btn-outline">Let's Connect</a>
+      </div>
+    </div>
+    <div class="hero-photo-col">
+      <div class="photo-frame">
+        <!-- UPLOAD YOUR PHOTO HERE -->
+        <img id="hero-img" src="" alt="" style="display:none">
+        <div class="photo-placeholder" id="photo-placeholder">
+          📸<br><br>Upload Your<br>Photo Here<br><br><span style="font-size:11px;font-weight:400">(Click to upload)</span>
+        </div>
+        <input type="file" accept="image/*" onchange="loadPhoto(this,'hero-img','photo-placeholder')" style="position:absolute;inset:0;opacity:0;cursor:pointer;z-index:2;">
+        <div class="photo-badge">
+          <strong>12+</strong>
+          <span>Brands Scaled</span>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-chip">
+          <div class="num">5+</div>
+          <div class="lbl">Industries</div>
+        </div>
+        <div class="stat-chip">
+          <div class="num">n8n</div>
+          <div class="lbl">Automation</div>
+        </div>
+        <div class="stat-chip">
+          <div class="num">SEO</div>
+          <div class="lbl">AEO · GEO</div>
+        </div>
+        <div class="stat-chip">
+          <div class="num">4×</div>
+          <div class="lbl">Ad Platforms</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- AUTOMATION / N8N -->
+<section id="automation">
+  <div class="section-wrap">
+    <p class="section-label reveal">AI Marketing Automation</p>
+    <h2 class="section-title reveal">Powered by n8n</h2>
+    <p class="section-sub reveal">I don't just run campaigns — I build automated marketing systems using n8n that work 24/7. From auto-generating social posts to lead handling, blog publishing, and GA reporting pipelines.</p>
+
+    <div class="auto-grid">
+      <div class="auto-hero-card reveal">
+        <span class="auto-badge">Live at CHN Technologies</span>
+        <h3>End-to-End Marketing Automation</h3>
+        <p>Built and deployed n8n workflows that automate the entire content-to-conversion pipeline — AI-generated social media posters and videos, automated lead capture and email nurturing, scheduled blog publishing, and real-time Google Analytics reporting — all without manual effort.</p>
+        <div class="auto-flow">
+          <span class="auto-flow-step">AI Content Gen</span>
+          <span class="auto-flow-arrow">→</span>
+          <span class="auto-flow-step">Auto Post</span>
+          <span class="auto-flow-arrow">→</span>
+          <span class="auto-flow-step">Lead Capture</span>
+          <span class="auto-flow-arrow">→</span>
+          <span class="auto-flow-step">Email Trigger</span>
+          <span class="auto-flow-arrow">→</span>
+          <span class="auto-flow-step">Blog Publish</span>
+          <span class="auto-flow-arrow">→</span>
+          <span class="auto-flow-step">GA Report</span>
+        </div>
+      </div>
+
+      <div class="auto-card reveal">
+        <div class="auto-card-icon">🤖</div>
+        <h4>SMM Automation</h4>
+        <p>Auto-generate posters and short videos using AI, schedule across Instagram, LinkedIn, Facebook — zero manual posting. Consistent brand presence on autopilot.</p>
+      </div>
+
+      <div class="auto-card reveal">
+        <div class="auto-card-icon">📥</div>
+        <h4>Lead Pipeline</h4>
+        <p>Incoming leads from Meta Ads, Google Ads, and website forms are captured, enriched, and auto-sent to the right person via email — with CRM update triggers built in.</p>
+      </div>
+
+      <div class="auto-card reveal">
+        <div class="auto-card-icon">✍️</div>
+        <h4>Automated Blog System</h4>
+        <p>Keyword research to AI-written blog draft to CMS publish — fully automated. Integrated with Google Search Console for performance feedback loops.</p>
+      </div>
+
+      <div class="auto-card reveal">
+        <div class="auto-card-icon">📊</div>
+        <h4>GA4 Reporting Bot</h4>
+        <p>Weekly performance reports pulled from Google Analytics 4 and delivered automatically to stakeholders via email — traffic, conversions, top pages, ad performance in one clean digest.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SEO SECTION -->
+<section id="seo">
+  <div class="section-wrap">
+    <p class="section-label reveal">Search Visibility</p>
+    <h2 class="section-title reveal">SEO · AEO · GEO</h2>
+    <p class="section-sub reveal">Full-spectrum search strategy covering traditional SEO, Answer Engine Optimization for AI search tools, and Geographic/Local SEO for location-based businesses.</p>
+
+    <div class="seo-grid">
+      <div class="seo-card reveal">
+        <div class="seo-card-num">01 — SEO</div>
+        <h4>Search Engine Optimization</h4>
+        <p>On-page, off-page, and technical SEO. Keyword research, content clustering, backlink building, Core Web Vitals optimization, and schema markup implementation.</p>
+        <div class="seo-tools-row">
+          <span class="tool-pill">SEMrush</span>
+          <span class="tool-pill">Ubersuggest</span>
+          <span class="tool-pill">GSC</span>
+          <span class="tool-pill">GA4</span>
+        </div>
+      </div>
+      <div class="seo-card reveal">
+        <div class="seo-card-num">02 — AEO</div>
+        <h4>Answer Engine Optimization</h4>
+        <p>Optimizing content for AI-driven search tools like ChatGPT, Gemini, and Perplexity. Structured data, FAQ schema, and conversational content for AI citation.</p>
+        <div class="seo-tools-row">
+          <span class="tool-pill">Schema Markup</span>
+          <span class="tool-pill">FAQs</span>
+          <span class="tool-pill">Claude AI</span>
+        </div>
+      </div>
+      <div class="seo-card reveal">
+        <div class="seo-card-num">03 — GEO</div>
+        <h4>Geographic / Local SEO</h4>
+        <p>Google My Business optimization, local citation building, geo-targeted keywords, and hyperlocal content — proven for Real Estate and service businesses in Tamil Nadu.</p>
+        <div class="seo-tools-row">
+          <span class="tool-pill">Google My Business</span>
+          <span class="tool-pill">Local Citations</span>
+        </div>
+      </div>
+      <div class="seo-card reveal">
+        <div class="seo-card-num">04 — Technical</div>
+        <h4>Technical SEO Audits</h4>
+        <p>Site speed, mobile-friendliness, robots.txt, sitemap, SSL checks, crawl error fixes, and structured data audits to ensure zero technical barriers to ranking.</p>
+        <div class="seo-tools-row">
+          <span class="tool-pill">Speed Test</span>
+          <span class="tool-pill">Sitemap</span>
+          <span class="tool-pill">SSL Check</span>
+        </div>
+      </div>
+      <div class="seo-card reveal">
+        <div class="seo-card-num">05 — Amazon SEO</div>
+        <h4>Amazon Product SEO</h4>
+        <p>Product listing optimization using Helium 10 — Cerebro for reverse ASIN research, Magnet for keyword discovery, Scribbles for listing writing — to drive organic Amazon rank.</p>
+        <div class="seo-tools-row">
+          <span class="tool-pill">Helium 10</span>
+          <span class="tool-pill">Cerebro</span>
+          <span class="tool-pill">Magnet</span>
+          <span class="tool-pill">Scribbles</span>
+        </div>
+      </div>
+      <div class="seo-card reveal">
+        <div class="seo-card-num">06 — Content SEO</div>
+        <h4>Content & Keyword Strategy</h4>
+        <p>Long-form content planning, pillar-cluster strategy, competitor gap analysis, and editorial calendar management aligned to search intent and conversion goals.</p>
+        <div class="seo-tools-row">
+          <span class="tool-pill">GKP</span>
+          <span class="tool-pill">SEMrush</span>
+          <span class="tool-pill">Medium</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ADS SECTION -->
+<section id="ads">
+  <div class="section-wrap">
+    <p class="section-label reveal">Performance Marketing</p>
+    <h2 class="section-title reveal">Paid Advertising</h2>
+    <p class="section-sub reveal">Multi-platform paid ads across Meta, Google, LinkedIn, and Amazon — from campaign architecture to creative testing, audience building, and ROAS optimization.</p>
+
+    <div class="ads-header-row">
+      <div class="ads-intro-card reveal">
+        <h3>4 Ad Platforms. 1 Growth Strategy.</h3>
+        <p>Every campaign is built from a full-funnel perspective — awareness, consideration, and conversion — with constant creative iteration and data-driven budget allocation across platforms.</p>
+        <div class="ads-platforms">
+          <div class="ads-platform-row">
+            <span class="ads-platform-name">Meta Ads (Facebook + Instagram)</span>
+            <span class="ads-platform-tag">Lead Gen · Retargeting</span>
+          </div>
+          <div class="ads-platform-row">
+            <span class="ads-platform-name">Google Ads (Search + Display + PMax)</span>
+            <span class="ads-platform-tag">Search · Shopping</span>
+          </div>
+          <div class="ads-platform-row">
+            <span class="ads-platform-name">LinkedIn Ads</span>
+            <span class="ads-platform-tag">B2B · SaaS</span>
+          </div>
+          <div class="ads-platform-row">
+            <span class="ads-platform-name">Amazon Ads (SP · SD · SB)</span>
+            <span class="ads-platform-tag">E-Commerce</span>
+          </div>
+        </div>
+      </div>
+      <div class="ads-stat-col">
+        <div class="ads-stat-box reveal">
+          <div class="big">12+</div>
+          <div class="lbl">Brands Managed</div>
+        </div>
+        <div class="ads-stat-box reveal" style="background: var(--accent);">
+          <div class="big" style="color:#fff;">4×</div>
+          <div class="lbl">Ad Platforms</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROOF OF WORK IMAGE UPLOAD GRID -->
+    <p class="section-label reveal" style="margin-bottom:14px;">Proof of Work — Upload Your Ad Screenshots</p>
+    <div class="proof-img-grid reveal">
+      <div class="proof-img-box">
+        <img id="proof1" src="" alt="" style="display:none">
+        <div class="upload-label">
+          <div class="upload-icon">📤</div>
+          Meta Ads Screenshot
+        </div>
+        <input type="file" accept="image/*" onchange="loadProof(this,'proof1')">
+      </div>
+      <div class="proof-img-box">
+        <img id="proof2" src="" alt="" style="display:none">
+        <div class="upload-label">
+          <div class="upload-icon">📤</div>
+          Google Ads Screenshot
+        </div>
+        <input type="file" accept="image/*" onchange="loadProof(this,'proof2')">
+      </div>
+      <div class="proof-img-box">
+        <img id="proof3" src="" alt="" style="display:none">
+        <div class="upload-label">
+          <div class="upload-icon">📤</div>
+          LinkedIn Ads Screenshot
+        </div>
+        <input type="file" accept="image/*" onchange="loadProof(this,'proof3')">
+      </div>
+      <div class="proof-img-box">
+        <img id="proof4" src="" alt="" style="display:none">
+        <div class="upload-label">
+          <div class="upload-icon">📤</div>
+          Amazon Ads Screenshot
+        </div>
+        <input type="file" accept="image/*" onchange="loadProof(this,'proof4')">
+      </div>
+      <div class="proof-img-box">
+        <img id="proof5" src="" alt="" style="display:none">
+        <div class="upload-label">
+          <div class="upload-icon">📤</div>
+          Campaign Results 1
+        </div>
+        <input type="file" accept="image/*" onchange="loadProof(this,'proof5')">
+      </div>
+      <div class="proof-img-box">
+        <img id="proof6" src="" alt="" style="display:none">
+        <div class="upload-label">
+          <div class="upload-icon">📤</div>
+          Campaign Results 2
+        </div>
+        <input type="file" accept="image/*" onchange="loadProof(this,'proof6')">
+      </div>
+      <div class="proof-img-box">
+        <img id="proof7" src="" alt="" style="display:none">
+        <div class="upload-label">
+          <div class="upload-icon">📤</div>
+          Analytics Dashboard
+        </div>
+        <input type="file" accept="image/*" onchange="loadProof(this,'proof7')">
+      </div>
+      <div class="proof-img-box">
+        <img id="proof8" src="" alt="" style="display:none">
+        <div class="upload-label">
+          <div class="upload-icon">📤</div>
+          ROAS / ROI Proof
+        </div>
+        <input type="file" accept="image/*" onchange="loadProof(this,'proof8')">
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SMM SECTION -->
+<section id="smm">
+  <div class="section-wrap">
+    <p class="section-label reveal">Social Media</p>
+    <h2 class="section-title reveal">Social Media Management</h2>
+    <p class="section-sub reveal">Building brand communities and driving engagement across Instagram, LinkedIn, Facebook, YouTube, Reddit, Quora, and X — with content calendars, community management, and analytics-backed strategy.</p>
+
+    <div class="smm-grid">
+      <div class="smm-left">
+        <div class="smm-platform-card reveal">
+          <div class="smm-platform-icon" style="background:#fce4ec;">📸</div>
+          <div>
+            <h5>Instagram & Facebook</h5>
+            <p>Reels, carousels, stories, live sessions — managed for CHN, Quick App Studio, AV Infotech, Legospace, WaPDF, Kovai Property Consultant</p>
+          </div>
+        </div>
+        <div class="smm-platform-card reveal">
+          <div class="smm-platform-icon" style="background:#e3f2fd;">💼</div>
+          <div>
+            <h5>LinkedIn</h5>
+            <p>Company page management, thought leadership content, B2B lead gen posts for AV Infotechnologies, TrackPilots, Quick App Studio, CHN Technologies</p>
+          </div>
+        </div>
+        <div class="smm-platform-card reveal">
+          <div class="smm-platform-icon" style="background:#f3e5f5;">▶️</div>
+          <div>
+            <h5>YouTube & AI Video</h5>
+            <p>AI-powered video editing and publishing — short-form and long-form. Produced for CHN Technologies and WaPDF marketing campaigns.</p>
+          </div>
+        </div>
+        <div class="smm-platform-card reveal">
+          <div class="smm-platform-icon" style="background:#e8f5e9;">📝</div>
+          <div>
+            <h5>Medium · Reddit · Quora</h5>
+            <p>Long-form authority content, community answers, and thought leadership articles to boost brand discoverability and organic reach.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="smm-right reveal">
+        <h3>What I Deliver</h3>
+        <div class="smm-deliverable">
+          <div class="dot"></div>
+          <div>
+            <h6>Monthly Content Calendar</h6>
+            <p>Platform-specific content plan with post types, frequency, and messaging themes per brand</p>
+          </div>
+        </div>
+        <div class="smm-deliverable">
+          <div class="dot"></div>
+          <div>
+            <h6>Creative + Copywriting</h6>
+            <p>Branded visuals made in Canva + AI tools, paired with optimized captions, hashtags, and CTAs</p>
+          </div>
+        </div>
+        <div class="smm-deliverable">
+          <div class="dot"></div>
+          <div>
+            <h6>Community Management</h6>
+            <p>Inbox management, comment replies, DM handling — maintaining brand tone across all interactions</p>
+          </div>
+        </div>
+        <div class="smm-deliverable">
+          <div class="dot"></div>
+          <div>
+            <h6>n8n Automation Integration</h6>
+            <p>Automated post scheduling, AI caption generation, and performance alert workflows built in n8n</p>
+          </div>
+        </div>
+        <div class="smm-deliverable">
+          <div class="dot"></div>
+          <div>
+            <h6>Monthly Analytics Report</h6>
+            <p>Reach, engagement rate, follower growth, and content performance insights per platform</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CREATIVE DESIGN -->
+<section id="design">
+  <div class="section-wrap">
+    <p class="section-label reveal">Creative Work</p>
+    <h2 class="section-title reveal">Graphic Design & AI Video</h2>
+    <p class="section-sub reveal">Scroll-stopping social media creatives, ad banners, brand assets, and AI-powered video content — made with Canva and AI tools tailored for each brand's visual identity.</p>
+
+    <div class="design-grid">
+      <div class="design-card reveal">
+        <div class="design-card-img">
+          <img id="design1" src="" alt="" style="display:none">
+          <div class="upload-overlay" id="dov1">
+            <div style="font-size:28px">🎨</div>
+            <span>Upload Design Work</span>
+          </div>
+          <input type="file" accept="image/*" onchange="loadDesign(this,'design1','dov1')">
+        </div>
+        <div class="design-card-body">
+          <h5>Social Media Creatives</h5>
+          <p>Instagram posts, carousels, reels covers for real estate, SaaS, and e-commerce brands</p>
+        </div>
+      </div>
+      <div class="design-card reveal">
+        <div class="design-card-img">
+          <img id="design2" src="" alt="" style="display:none">
+          <div class="upload-overlay" id="dov2">
+            <div style="font-size:28px">📢</div>
+            <span>Upload Ad Creative</span>
+          </div>
+          <input type="file" accept="image/*" onchange="loadDesign(this,'design2','dov2')">
+        </div>
+        <div class="design-card-body">
+          <h5>Ad Banners & Creatives</h5>
+          <p>High-converting Meta and Google display ad creatives, A/B tested for CTR performance</p>
+        </div>
+      </div>
+      <div class="design-card reveal">
+        <div class="design-card-img">
+          <img id="design3" src="" alt="" style="display:none">
+          <div class="upload-overlay" id="dov3">
+            <div style="font-size:28px">🎬</div>
+            <span>Upload AI Video</span>
+          </div>
+          <input type="file" accept="image/*" onchange="loadDesign(this,'design3','dov3')">
+        </div>
+        <div class="design-card-body">
+          <h5>AI Video Editing</h5>
+          <p>Product explainers, brand reels, and short-form video ads produced for CHN Technologies and WaPDF</p>
+        </div>
+      </div>
+      <div class="design-card reveal">
+        <div class="design-card-img">
+          <img id="design4" src="" alt="" style="display:none">
+          <div class="upload-overlay" id="dov4">
+            <div style="font-size:28px">🏠</div>
+            <span>Upload Design</span>
+          </div>
+          <input type="file" accept="image/*" onchange="loadDesign(this,'design4','dov4')">
+        </div>
+        <div class="design-card-body">
+          <h5>Real Estate Marketing</h5>
+          <p>Property brochures, site hoardings, social posts for Legospace, Kovai Property, Trivoli Promoters, Green Realty</p>
+        </div>
+      </div>
+      <div class="design-card reveal">
+        <div class="design-card-img">
+          <img id="design5" src="" alt="" style="display:none">
+          <div class="upload-overlay" id="dov5">
+            <div style="font-size:28px">👕</div>
+            <span>Upload Brand Design</span>
+          </div>
+          <input type="file" accept="image/*" onchange="loadDesign(this,'design5','dov5')">
+        </div>
+        <div class="design-card-body">
+          <h5>E-Commerce Brand Assets</h5>
+          <p>Product imagery, lifestyle graphics, Amazon A+ content, and brand kit for Tiltto Shop and Quikzyo</p>
+        </div>
+      </div>
+      <div class="design-card reveal">
+        <div class="design-card-img">
+          <img id="design6" src="" alt="" style="display:none">
+          <div class="upload-overlay" id="dov6">
+            <div style="font-size:28px">💡</div>
+            <span>Upload Design</span>
+          </div>
+          <input type="file" accept="image/*" onchange="loadDesign(this,'design6','dov6')">
+        </div>
+        <div class="design-card-body">
+          <h5>SaaS & Tech Branding</h5>
+          <p>Clean UI-inspired marketing graphics for TrackPilots, Quick App Studio, and WaPDF product promotions</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- EXPERIENCE SECTION -->
+<section id="experience">
+  <div class="section-wrap">
+    <p class="section-label reveal">Portfolio</p>
+    <h2 class="section-title reveal">Brands I've Grown</h2>
+    <p class="section-sub reveal">12+ brands across Real Estate, SaaS, E-Commerce, Education, Digital Agency, and Product sectors — with hands-on execution across the full digital marketing stack.</p>
+
+    <div class="exp-grid">
+      <div class="exp-card reveal">
+        <div class="exp-card-type">App Development Agency</div>
+        <h5>Quick App Studio</h5>
+        <div class="exp-skills-wrap">
+          <span class="exp-skill-tag">Competitor Analysis</span>
+          <span class="exp-skill-tag">SEO</span>
+          <span class="exp-skill-tag">SMM</span>
+          <span class="exp-skill-tag">Meta Ads</span>
+          <span class="exp-skill-tag">Google Ads</span>
+          <span class="exp-skill-tag">Content</span>
+        </div>
+        <a href="https://quickappstudio.com/" target="_blank" class="exp-link">↗ quickappstudio.com</a>
+      </div>
+      <div class="exp-card reveal">
+        <div class="exp-card-type">SaaS · Employee Monitoring</div>
+        <h5>TrackPilots</h5>
+        <div class="exp-skills-wrap">
+          <span class="exp-skill-tag">Competitor Analysis</span>
+          <span class="exp-skill-tag">SEO</span>
+          <span class="exp-skill-tag">SMM</span>
+          <span class="exp-skill-tag">LinkedIn Ads</span>
+          <span class="exp-skill-tag">Google Ads</span>
+          <span class="exp-skill-tag">Content</span>
+        </div>
+        <a href="https://trackpilots.com/" target="_blank" class="exp-link">↗ trackpilots.com</a>
+      </div>
+      <div class="exp-card reveal">
+        <div class="exp-card-type">Digital Marketing Agency</div>
+        <h5>AV Infotechnologies</h5>
+        <div class="exp-skills-wrap">
+          <span class="exp-skill-tag">SEO</span>
+          <span class="exp-skill-tag">SMM</span>
+          <span class="exp-skill-tag">Meta Ads</span>
+          <span class="exp-skill-tag">Google Ads</span>
+          <span class="exp-skill-tag">Graphic Design</span>
+          <span class="exp-skill-tag">Content</span>
+        </div>
+        <a href="https://avinfotechnologies.com/" target="_blank" class="exp-link">↗ avinfotechnologies.com</a>
+      </div>
+      <div class="exp-card reveal">
+        <div class="exp-card-type">Real Estate</div>
+        <h5>Legospace</h5>
+        <div class="exp-skills-wrap">
+          <span class="exp-skill-tag">SEO · GEO</span>
+          <span class="exp-skill-tag">Meta Ads</span>
+          <span class="exp-skill-tag">Google Ads</span>
+          <span class="exp-skill-tag">SMM</span>
+          <span class="exp-skill-tag">Graphic Design</span>
+        </div>
+        <a href="https://legospace.in/" target="_blank" class="exp-link">↗ legospace.in</a>
+      </div>
+      <div class="exp-card reveal">
+        <div class="exp-card-type">Real Estate Consultant</div>
+        <h5>Kovai Property Consultant</h5>
+        <div class="exp-skills-wrap">
+          <span class="exp-skill-tag">SEO</span>
+          <span class="exp-skill-tag">SMM</span>
+          <span class="exp-skill-tag">Meta Ads</span>
+          <span class="exp-skill-tag">Google Ads</span>
+          <span class="exp-skill-tag">Graphic Design</span>
+        </div>
+        <a href="https://kovaipropertyconsultant.com/" target="_blank" class="exp-link">↗ kovaipropertyconsultant.com</a>
+      </div>
+      <div class="exp-card reveal">
+        <div class="exp-card-type">Men's Fashion · E-Commerce</div>
+        <h5>Tiltto Shop</h5>
+        <div class="exp-skills-wrap">
+          <span class="exp-skill-tag">SEO</span>
+          <span class="exp-skill-tag">SMM</span>
+          <span class="exp-skill-tag">Meta Ads</span>
+          <span class="exp-skill-tag">Google Ads</span>
+          <span class="exp-skill-tag">Graphic Design</span>
+        </div>
+        <a href="https://tilltoshop.com/" target="_blank" class="exp-link">↗ tilltoshop.com</a>
+      </div>
+      <div class="exp-card reveal">
+        <div class="exp-card-type">MBBS Education Agency</div>
+        <h5>Vijays Infomedia</h5>
+        <div class="exp-skills-wrap">
+          <span class="exp-skill-tag">SEO</span>
+          <span class="exp-skill-tag">SMM</span>
+          <span class="exp-skill-tag">Meta Ads</span>
+          <span class="exp-skill-tag">Google Ads</span>
+          <span class="exp-skill-tag">Graphic Design</span>
+        </div>
+        <a href="https://www.vijaysinfomedia.com/" target="_blank" class="exp-link">↗ vijaysinfomedia.com</a>
+      </div>
+      <div class="exp-card reveal">
+        <div class="exp-card-type">Staffing & Biometric</div>
+        <h5>CHN Technologies</h5>
+        <div class="exp-skills-wrap">
+          <span class="exp-skill-tag">SEO</span>
+          <span class="exp-skill-tag">SMM</span>
+          <span class="exp-skill-tag">n8n Automation</span>
+          <span class="exp-skill-tag">AI Video</span>
+          <span class="exp-skill-tag">Meta Ads</span>
+        </div>
+        <a href="https://chnindia.com/" target="_blank" class="exp-link">↗ chnindia.com</a>
+      </div>
+      <div class="exp-card reveal">
+        <div class="exp-card-type">PDF SaaS Tool</div>
+        <h5>WaPDF</h5>
+        <div class="exp-skills-wrap">
+          <span class="exp-skill-tag">SEO</span>
+          <span class="exp-skill-tag">SMM</span>
+          <span class="exp-skill-tag">Meta Ads</span>
+          <span class="exp-skill-tag">Graphic Design</span>
+          <span class="exp-skill-tag">AI Video</span>
+        </div>
+        <a href="https://wapdf.in/" target="_blank" class="exp-link">↗ wapdf.in</a>
+      </div>
+      <div class="exp-card reveal">
+        <div class="exp-card-type">E-Commerce · Amazon</div>
+        <h5>Quikzyo</h5>
+        <div class="exp-skills-wrap">
+          <span class="exp-skill-tag">Amazon Listing</span>
+          <span class="exp-skill-tag">Content Marketing</span>
+          <span class="exp-skill-tag">Amazon SEO</span>
+          <span class="exp-skill-tag">Helium 10</span>
+        </div>
+        <a href="http://quickzyo.com" target="_blank" class="exp-link">↗ quikzyo.com</a>
+      </div>
+      <div class="exp-card reveal">
+        <div class="exp-card-type">Real Estate</div>
+        <h5>Trivoli Promoters</h5>
+        <div class="exp-skills-wrap">
+          <span class="exp-skill-tag">SEO</span>
+          <span class="exp-skill-tag">SMM</span>
+          <span class="exp-skill-tag">Meta Ads</span>
+          <span class="exp-skill-tag">Google Ads</span>
+          <span class="exp-skill-tag">Graphic Design</span>
+        </div>
+        <a href="http://trivolipromoters.in" target="_blank" class="exp-link">↗ trivolipromoters.in</a>
+      </div>
+      <div class="exp-card reveal">
+        <div class="exp-card-type">Real Estate</div>
+        <h5>Green Realty Experts</h5>
+        <div class="exp-skills-wrap">
+          <span class="exp-skill-tag">Competitor Analysis</span>
+          <span class="exp-skill-tag">SEO</span>
+          <span class="exp-skill-tag">SMM</span>
+          <span class="exp-skill-tag">Meta Ads</span>
+          <span class="exp-skill-tag">Graphic Design</span>
+        </div>
+        <a href="http://greenrealtyexperts.in" target="_blank" class="exp-link">↗ greenrealtyexperts.in</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- TOOLS -->
+<section id="tools">
+  <div class="section-wrap">
+    <p class="section-label reveal">Tech Stack</p>
+    <h2 class="section-title reveal">Tools & Platforms</h2>
+    <p class="section-sub reveal">A full toolkit spanning SEO intelligence, AI productivity, project management, and automation — selected for real campaign performance.</p>
+
+    <div class="tools-masonry reveal">
+      <div class="tools-group">
+        <h4><span>⚙️</span> Automation</h4>
+        <div class="tool-item">n8n — Workflow Automation</div>
+        <div class="tool-item">Baserow.io — No-code Database</div>
+        <div class="tool-item">Miro.io — Process Mapping</div>
+        <div class="tool-item">Banani.io</div>
+      </div>
+      <div class="tools-group">
+        <h4><span>🤖</span> AI Tools</h4>
+        <div class="tool-item">Claude (Anthropic)</div>
+        <div class="tool-item">ChatGPT</div>
+        <div class="tool-item">Gemini</div>
+        <div class="tool-item">DeepSeek</div>
+        <div class="tool-item">Perplexity AI</div>
+        <div class="tool-item">Flow Google Labs</div>
+      </div>
+      <div class="tools-group">
+        <h4><span>🔍</span> SEO Tools</h4>
+        <div class="tool-item">Google Analytics 4</div>
+        <div class="tool-item">Google Search Console</div>
+        <div class="tool-item">SEMrush</div>
+        <div class="tool-item">Ubersuggest</div>
+        <div class="tool-item">Google Keyword Planner</div>
+        <div class="tool-item">Google My Business</div>
+      </div>
+      <div class="tools-group">
+        <h4><span>📦</span> Amazon Tools</h4>
+        <div class="tool-item">Helium 10 — Cerebro</div>
+        <div class="tool-item">Helium 10 — Magnet</div>
+        <div class="tool-item">Helium 10 — Scribbles</div>
+      </div>
+      <div class="tools-group">
+        <h4><span>🗂️</span> Project Management</h4>
+        <div class="tool-item">Notion</div>
+        <div class="tool-item">Trello</div>
+        <div class="tool-item">Workfast.ai</div>
+        <div class="tool-item">Slack</div>
+      </div>
+      <div class="tools-group">
+        <h4><span>🎨</span> Design & Video</h4>
+        <div class="tool-item">Canva — Graphics & Videos</div>
+        <div class="tool-item">AI Video Tools</div>
+      </div>
+      <div class="tools-group">
+        <h4><span>🛠️</span> Technical SEO</h4>
+        <div class="tool-item">Robots.txt Checker</div>
+        <div class="tool-item">Sitemap Checker</div>
+        <div class="tool-item">SSL Certificate Checker</div>
+        <div class="tool-item">Website Speed Test</div>
+        <div class="tool-item">Mobile Friendly Test</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CONTACT -->
+<section id="contact">
+  <p class="c-label">Let's Build Something</p>
+  <h2>Ready to Scale<br>Your Brand?</h2>
+  <p>Whether you need SEO, paid ads, social media management, or a full n8n-powered automation pipeline — let's talk about your growth goals.</p>
+  <div class="contact-chips">
+    <a href="mailto:your@email.com" class="contact-chip">📧 Email Me</a>
+    <a href="https://www.linkedin.com/company/avinfotechnologies/" target="_blank" class="contact-chip">💼 LinkedIn</a>
+    <a href="https://www.instagram.com/avinfotechnologies/" target="_blank" class="contact-chip">📸 Instagram</a>
+    <a href="https://wa.me/91XXXXXXXXXX" target="_blank" class="contact-chip">💬 WhatsApp</a>
+  </div>
+</section>
+
+<footer>
+  <span>© 2025 Digital Marketing Specialist — Chennai, India</span>
+  <span>Built for <strong>Growth</strong> · Powered by <strong>n8n + AI</strong></span>
+</footer>
+
+<script>
+function loadPhoto(input, imgId, placeholderId) {
+  if (input.files && input.files[0]) {
+    const reader = new FileReader();
+    reader.onload = function(e) {
+      const img = document.getElementById(imgId);
+      img.src = e.target.result;
+      img.style.display = 'block';
+      const ph = document.getElementById(placeholderId);
+      if (ph) ph.style.display = 'none';
+    };
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+
+function loadProof(input, imgId) {
+  if (input.files && input.files[0]) {
+    const reader = new FileReader();
+    reader.onload = function(e) {
+      const img = document.getElementById(imgId);
+      img.src = e.target.result;
+      img.style.display = 'block';
+      const box = input.parentElement;
+      const label = box.querySelector('.upload-label');
+      if (label) label.style.display = 'none';
+    };
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+
+function loadDesign(input, imgId, ovId) {
+  if (input.files && input.files[0]) {
+    const reader = new FileReader();
+    reader.onload = function(e) {
+      const img = document.getElementById(imgId);
+      img.src = e.target.result;
+      img.style.display = 'block';
+      const ov = document.getElementById(ovId);
+      if (ov) ov.style.display = 'none';
+    };
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+
+// Scroll reveal
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => entry.target.classList.add('visible'), i * 60);
+    }
+  });
+}, { threshold: 0.08 });
+reveals.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
